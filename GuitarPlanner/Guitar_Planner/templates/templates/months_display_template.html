@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wyświetlenie listy miesięcy</title>
+</head>
+<body>
+{% for month in months %}
+<ul>
+    <li> <p> Nazwa: {{ month.name }} </p>
+        <p>    Rok: {{ month.year }} </p>
+          <p>   Ćwiczenie:
+          {% for exercise in month.exercise.all %}
+            {{exercise.name}},
+            {% endfor %}
+          </p>
+        <p>   Utwór:
+        {% for song in month.song.all %}
+            {{song.name}},
+          {% endfor %}
+        </p>
+        <p>Użytkownik: {{ month.user.username }}</p>
+    </li>
+</ul>
+{% endfor %}
+</body>
+</html>

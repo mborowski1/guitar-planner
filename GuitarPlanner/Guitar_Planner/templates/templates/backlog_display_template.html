@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for back_log in back_logs %}
+<ul>
+    <li> <p> Nazwa: {{ back_log.name }} </p>
+        <p>    Opis: {{ back_log.description }} </p>
+      <p> Wartość: {{ back_log.value }} </p>
+        <p> Użytkownik: {{ back_log.user.username }} </p>
+</ul>
+{% endfor %}
+</body>
+</html>

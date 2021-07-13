@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wyświetlenie listy ćwiczeń</title>
+</head>
+<body>
+{% for exercise in exercises %}
+<ul>
+    <li> <p> Nazwa: {{ exercise.name }} </p>
+        <p>    Opis: {{ exercise.description }} </p>
+          <p>   Szybkość: {{exercise.speed}} </p> </li>
+    <p> Użytkownik: {{ exercise.user.username }} </p>
+</ul>
+{% endfor %}
+</body>
+</html>

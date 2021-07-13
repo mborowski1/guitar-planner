@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wyświetlenie listy utworów</title>
+</head>
+<body>
+{% for song in songs %}
+<ul>
+    <li> <p> Nazwa: {{ song.name }} </p>
+        <p>    Gatunek: {{ song.genre }} </p>
+          <p>   Wykonawca: {{ song.band.name }} </p>
+        <p>Użytkownik: {{ song.user.username }}</p>
+    </li>
+</ul>
+{% endfor %}
+</body>
+</html>

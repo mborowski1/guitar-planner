@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    {{form}}
+    {{message}}
+    <input type="submit" value="Potwierdź">
+</form>
+</body>
+<a href="addloginpassword/">Chcę stworzyć nowego użytkownika</a>
+</html>
