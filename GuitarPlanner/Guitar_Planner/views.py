@@ -44,7 +44,6 @@ class AddExercise(View):
 
 
             exercise = ExerciseModel.objects.create(name=name, description=description, speed=speed, user=request.user)
-            #exercise.month.add(month_thing)
             exercise.save()
 
 
